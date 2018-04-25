@@ -3,7 +3,6 @@ package com.asseco.cass.ais.domain;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.util.Calendar;
 import java.util.UUID;
 
 
