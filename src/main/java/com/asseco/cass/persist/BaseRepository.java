@@ -9,8 +9,7 @@ abstract class BaseRepository<T extends Object> {
     protected EntityManager em;
 
 
-
-//
+// TODO: 27-Apr-18 djordje.colovic obrisati kad proradi baza
 //	public void directEJBQL(String ejbql) {
 //		Query q = em.createQuery(ejbql);
 //		q.executeUpdate();

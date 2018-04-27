@@ -10,9 +10,6 @@ import org.apache.commons.lang.Validate;
 import org.eclipse.persistence.annotations.FetchGroup;
 import org.eclipse.persistence.config.QueryHints;
 
-
-
-
 public abstract class EntityRepositoryImpl<T extends BaseEntity> extends BaseRepository<T> implements EntityRepository<T>{
 
     abstract protected Class<T> getEntityClass();

@@ -3,6 +3,7 @@ package com.asseco.cass.ais.domain;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.Calendar;
 import java.util.UUID;
 
 
@@ -20,22 +21,23 @@ public abstract class BaseEntity implements Serializable {
     private Long version;
     @Column(name = "UUID", length = 36)
     private String uuid;
-    @Column
-    private LocalDateTime entityCreated;
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name="ENTITY_CREATED")
+    private Calendar entityCreated;
 
 
 
     public BaseEntity() {
         super();
         this.uuid = UUID.randomUUID().toString();
-        this.setEntityCreated(LocalDateTime.now());
+        this.setEntityCreated(Calendar.getInstance());
     }
 
-    public LocalDateTime getEntityCreated() {
+    public Calendar getEntityCreated() {
         return entityCreated;
     }
 
-    public void setEntityCreated(LocalDateTime entityCreated) {
+    public void setEntityCreated(Calendar entityCreated) {
         this.entityCreated = entityCreated;
     }
 
